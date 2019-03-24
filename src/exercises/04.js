@@ -14,10 +14,7 @@ class Toggle extends React.Component {
         this.props.onToggle(this.state.on)
       },
     )
-  render() {
-    const {on} = this.state
-    return this.props.children({ on, toggle: this.toggle })
-  }
+  render = () => this.props.children({ on: this.state.on, toggle: this.toggle })
 }
 
 // Don't make changes to the Usage component. It's here to show you how your
